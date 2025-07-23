@@ -9,21 +9,13 @@ pipeline {
         sh 'mvn --version'
       }
     }
-
     stage('Front-end') {
       agent {
-        docker { image 'node:16-alpine' }  // ❗ fixed space issue here
+        docker { image 'node:16-alpine' }
       }
       steps {
         sh 'node --version'
       }
     }
   }
-}
-
-
-
-}
-
-
 }
